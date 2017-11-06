@@ -70,8 +70,26 @@ public class HolaMundo extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
-        //String user = request.getParameter(string);
+        //processRequest(request, response);
+        String user = request.getParameter("user");
+        String pass = request.getParameter("pass");
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet HolaMundo</title>");
+            out.println("<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css\">");
+            out.println("<script src=\"https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js\"></script>");
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h2>Comprobacion del Login</h2>");
+            out.println("<h4>El usuario es: " + user + "</h4>");
+            out.println("<h4>La contraseña es: " + pass + "</h4>");
+            out.println("</body>");
+            out.println("</html>");
+        }
     }
 
     /**

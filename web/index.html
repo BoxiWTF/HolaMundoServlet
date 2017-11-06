@@ -17,7 +17,18 @@ and open the template in the editor.
     </head>
     <body>
         <form action="HolaMundo" method="post">
-            <div>
+            <table>
+		<tr>
+                    <td>Usuario</td>
+			<td><input name="user" /></td>
+		</tr>
+		<tr>
+                    <td>Contraseña</td>
+			<td><input name="pass" /></td>
+		</tr>
+            </table>
+            <input type="submit" />
+            <!--<div>
                 <label for="user">User:</label>
                 <input type="text" id="user" />
             </div>
@@ -27,7 +38,7 @@ and open the template in the editor.
             </div>
             <div class="button">
                 <button type="submit">OK</button>
-            </div>
+            </div>-->
         </form>
     </body>
 </html>
